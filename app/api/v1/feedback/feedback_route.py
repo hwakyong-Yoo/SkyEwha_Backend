@@ -19,7 +19,6 @@ from app.crud.crud_feedback import upsert_feedback
 router = APIRouter()
 
 @router.get("/my-feedbacks", response_model=List[FeedbackResponse])
-@router.get("/my-feedbacks", response_model=List[FeedbackResponse])
 def read_my_feedbacks(
     db: Session = Depends(deps.get_db),
     current_user: User = Depends(get_current_user)
